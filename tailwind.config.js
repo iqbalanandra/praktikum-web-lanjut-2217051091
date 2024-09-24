@@ -6,7 +6,11 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'pixelify': ['"Pixelify Sans"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
