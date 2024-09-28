@@ -62,10 +62,15 @@
 
       <!-- Input Kelas -->
       <div class="mb-4">
-        <label for="kelas" class="block text-sm text-primary mb-2">
+        <label for="id_kelas" class="block text-sm text-primary mb-2">
           Kelas:
         </label>
-        <input type="text" name="kelas" id="kelas" class="w-full border border-primary py-2 px-3 rounded focus:outline-none focus:ring-2 focus:ring-red-300" placeholder="Masukkan Kelas" required>
+        <select name="kelas_id" id="kelas_id" class="w-full border border-primary py-2 px-3 rounded focus:outline-none focus:ring-2 focus:ring-red-300" required>>
+          @foreach ($kelas as $kelasItem)
+          <option value="{{$kelasItem->id}}">{{$kelasItem->nama_kelas}}</option>
+            
+          @endforeach
+        </select>
       </div>
 
       <!-- Tombol Submit -->

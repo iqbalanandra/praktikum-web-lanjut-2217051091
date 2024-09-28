@@ -19,7 +19,7 @@
     <div class="text-center mt-4">
       <!-- Box Nama -->
       <div class="pixel-box font-semibold">{{$nama}}</div>
-      <p class="pixel-box font-semibold">{{$kelas}}</p>
+      <p class="pixel-box font-semibold">{{$nama_kelas}}</p>
       <p class="pixel-box font-semibold">{{$npm}}</p>
     </div>
   </div>
