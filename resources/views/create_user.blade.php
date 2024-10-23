@@ -7,7 +7,7 @@
   <!-- Card/Container -->
   <div class="max-w-md w-full bg-white rounded-lg shadow-md border border-[#d1d5db] p-6">
 
-    <form action="{{ route('user.store') }}" method="POST" class="font-pixel">
+    <form action="{{ route('user.store') }}" method="POST" class="font-pixel"  enctype="multipart/form-data">
       @csrf
 
       <!-- Title -->
@@ -43,6 +43,9 @@
           @endforeach
         </select>
       </div>
+
+      <input type="file" id="foto" name="foto"> <br> <br>
+      <label for="foto">Foto: <br></label>
 
       <!-- Tombol Submit -->
       <div class="flex items-center justify-center">
