@@ -12,6 +12,8 @@
       Data Users
     </h2>
 
+    <a href="{{ route('users.create') }}" class="btn btn-primary mb-3">Tambah Pengguna Baru</a>
+
     <!-- Table -->
     <div class="overflow-x-auto">
       <table class="min-w-full bg-white border-4 border-[#333]">
@@ -21,6 +23,8 @@
             <th class="py-3 px-6 border-r-4 border-[#333]">Nama</th>
             <th class="py-3 px-6 border-r-4 border-[#333]">NPM</th>
             <th class="py-3 px-6 border-r-4 border-[#333]">Kelas</th>
+            <th class="py-3 px-6 border-r-4 border-[#333]">Foto</th>
+            <th class="py-3 px-6 border-r-4 border-[#333]">Action</th>
           </tr>
         </thead>
         <tbody class="text-gray-700 text-sm font-bold uppercase">
@@ -30,6 +34,25 @@
             <td class="py-3 px-6 border-r-4 border-[#333]">{{ $user['nama'] }}</td>
             <td class="py-3 px-6 border-r-4 border-[#333]">{{ $user['npm'] }}</td>
             <td class="py-3 px-6 border-r-4 border-[#333]">{{ $user['nama_kelas'] }}</td>
+            <td>
+            <img src="{{ $user->foto ? asset($user->foto) : asset('assets/img/default.png') }}" alt="Foto User" width="100"></td>
+            <td>
+                    <!-- View -->
+                    <a href="{{ route('user.show', $user['id']) }}">View</a>
+
+                    <!-- Edit -->
+                    <a href="{{ route('user.edit', $user['id']) }}" >Edit</a>
+
+                    <!-- Delete -->
+                    <form action="{{ route('user.destroy', $user['id']) }}" method="POST" style="display:inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')">Delete</button>
+                    </form>
+                </td>
+            
+
           </tr>
           @endforeach
         </tbody>
