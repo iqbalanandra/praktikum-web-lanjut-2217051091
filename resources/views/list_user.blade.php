@@ -21,7 +21,6 @@
           <tr class="bg-gray-800 text-left text-sm leading-normal text-white uppercase tracking-wider">
             <th class="py-3 px-6 border-r-4 border-[#333]">ID</th>
             <th class="py-3 px-6 border-r-4 border-[#333]">Nama</th>
-            <th class="py-3 px-6 border-r-4 border-[#333]">NPM</th>
             <th class="py-3 px-6 border-r-4 border-[#333]">Kelas</th>
             <th class="py-3 px-6 border-r-4 border-[#333]">Foto</th>
             <th class="py-3 px-6 border-r-4 border-[#333]">Action</th>
@@ -32,7 +31,6 @@
           <tr class="border-b-4 border-[#333] hover:bg-gray-200">
             <td class="py-3 px-6 border-r-4 border-[#333]">{{ $user['id'] }}</td>
             <td class="py-3 px-6 border-r-4 border-[#333]">{{ $user['nama'] }}</td>
-            <td class="py-3 px-6 border-r-4 border-[#333]">{{ $user['npm'] }}</td>
             <td class="py-3 px-6 border-r-4 border-[#333]">{{ $user['nama_kelas'] }}</td>
             <td>
             <img src="{{ $user->foto ? asset($user->foto) : asset('assets/img/default.png') }}" alt="Foto User" width="100"></td>

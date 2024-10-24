@@ -18,12 +18,14 @@
            alt="Foto Profil">
     </div>
 
-    <!-- Nama, Kelas, dan NPM -->
+    <!-- Informasi Profil -->
     <div class="text-center mt-4">
       <!-- Box Nama -->
       <div class="pixel-box font-semibold">{{ $user->nama }}</div>
       <p class="pixel-box font-semibold">{{ $user->nama_kelas }}</p>
-      <p class="pixel-box font-semibold">{{ $user->npm }}</p>
+      <p class="pixel-box font-semibold">{{ $user->semester }}</p>
+      <p class="pixel-box font-semibold">{{ $user->nama_fakultas }}</p>
+      <p class="pixel-box font-semibold">{{ $user->jurusan }}</p>
     </div>
   </div>
 
